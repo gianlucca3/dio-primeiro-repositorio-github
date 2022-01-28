@@ -1,0 +1,72 @@
+Introdução ao Git e ao GitHub
+É um versionamento de código.
+Versionamento de códigos: cvs, git, bitkeeper
+Repositório online: GitHub, GitLab, BitBucket.
+Comandos Básicos para navegação no terminal
+GUI x CLI –  
+Comand Line Interface (CLI) – Interagir com o Git usando as linhas de código
+GUI – adiciona uma interface gráfica no Git.
+Para trabalhar com o Git, nós vamos usar alguns comandos que são diferentes nos sistemas operacionais, como por exemplo:
+Windows
+•	cd – (chance directory) ele é pra você acessar uma pasta especifica dentro do diretório. Ex.: “cd/” = ele vai para a pasta do diretório “C:/”
+•	dir – esse comando serve para listar, ou seja, listar os diretórios.
+•	mkdir – (make directory) criar pasta dentro do diretório.
+•	del/rmdir – deleta a pasta (del no windows ele só deleta arquivos, não deleta repositório, já o rmdir deleta o repositório rmdir “nome do repositório” /S /Q)
+•	cls – (clear screen) limpa o terminal
+Unix
+•	cd - (chance directory) ele é pra você acessar uma pasta especifica dentro do diretório. Ex.: “cd/” = ele vai pra pasta do diretório “C:/”.
+•	ls – esse comando serve para listar, ou seja, listar os diretórios.
+•	mkdir - criar pasta dentro do diretório
+•	rm-rf – vai deletar todas as pastas sem qualquer tipo de confirmação ( comando é “rm – rf nome do repositório/”
+•	clear - limpa o terminal ou “CTRL + L”
+Para retroceder a pasta no comando “cd” o comando é “cd..” tanto no Windows e no Linux.
+obs.: todos esses comandos possuem variâncias, possui complementos (flags) eles acrescentam, modificam ou formatam a forma como esses comandos são devolvidos para gente.
+Se deu tudo certo o terminal não vai falar nada, silencio no sucesso.
+Como o Git funciona?
+SHA1 – o SHA1 é um algoritmo significa Secure Hash Algorithm, é um conjunto de funções hash criptográficas projetadas pela NSA (agencia de segurança nacional dos eua) A encriptação gera um conjunto de caracteres de 40 dígitos único, serve para identificação.
+É uma forma curta de representar um arquivo. 
+Ex.: “SHA1”
+1 echo “ola mundo” | openss1 sha1
+2 linha de 40 dígitos de caracteres
+Objetos internos do git
+•	BLOBS –Ele contém metadados do Git, tamanho do objeto, da string, tamanho do arquivo, entre outros.
+•	TREES – as trees armazenam os blobs, então e uma crescente, o blob e o cbloco básico da preposição. A arvore e responsável por montar todos os arquivos, podem apontar tanto por blobs ou por outras arvores. 
+•	COMMITS -  e o objeto que vai juntar tudo, o objeto que vai dar sentido para alteração que você esta fazendo o commit aponta para a arvore, aponta para o último commit feito antes dele, aponta para o autor e para uma mensagem. Quando olhar um commit você tem certeza que ninguém alterou o arquivo ou código.
+Sistema distribuído e Seguro – um código hosteado em uma nuvem (github), possui 40 pessoas contribuindo com ele, a versão mais recente da maquina do servidor, e outras 40 versões são confiáveis por conta da estrutura do git, por isso ele e seguro e distribuído.
+Chaves SSH e Tokens
+Chaves SSH – uma forma em estabelecer uma conexão segura entre duas maquinas. Vai sempre ter uma chave publica e privada, sempre que colocar o github vai conhecer a chave publica e privada da nossa maquina, já vai ficar configurada no github.
+Como gerar uma chave SSH?
+Passo a passo
+Abra o git bash
+Escreva no terminal
+ ssh-keygen –t ed25519 –c “email que vc usa no github”
+Ele vai gerar uma chave em pasta oculta
+Colocar senha no terminal
+Confirmar senha
+Entrar na pasta pelo git bash em código $ cd/users/gian_/.ssh
+Comando cat para visualizar o conteúdo de dentro de uma dessas chaves
+Cat “id_chave.pub”
+Copia e cola no github autentica e volta pro bash
+Terminal
+Eval $(ssh-agent –s)
+Ssh-add id_chaveprivada
+Digite a senha que vc cadastrou
+Para clonar um repositório no github digitar o seguinte código git clone +ssh.
+
+Iniciando o Git e criando o primeiro Commit
+•	git init – cria um repositório dentro da pasta que vc escolheu, porem o repositório é vazio
+•	git add - 
+•	git commit – 
+•	ls -a: lista arquivos ocultos (pastas com ponto “.”  Antes do nome ex: .git)
+•	git config –global: ele abre as configurações do git.
+•	Markdown: é uma forma de escrever um arquivo HTML. Para escrever o titulo de nível um (h1) coloca “# titulo”, (h2) coloca “## titulo”, ... (h6) coloca “###### titulo”. 
+Passo a passo no ciclo de vida
+Quando usamos o git init estamos criando o repositório naquela pasta. 
+Tracked e Untracked
+Tracked – são arquivos que são rastreáveis pelo Git . Podem se dividir em 3 estagios diferentes Unmodified, Modified, Staged. E temos um outro agrupamento o Untracked que são os arquivos que o git não tem agrupamento e não tem conhecimento dele.
+Staged: e aonde fica o arquivo que estão se preparando pra fazer parte de outro tipo de agrupamento.
+Modified:
+Unmodified: 
+
+•	GIt status – vai dizer se o arquivo está unmodified, modified, staged. 
+•	Mv “nome do arquivo”./ repositório que vc quer mover/ - mover arquivo para outro repositório. 

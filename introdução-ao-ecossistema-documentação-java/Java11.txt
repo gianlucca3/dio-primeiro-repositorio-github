@@ -1,0 +1,94 @@
+Contextualização Java 11
+1 – Palavras reservadas – essas palavras não podemos usar em definição do nome, classes, ou atributo.
+Abstract, Asset, Boolean, Break, Byte, Case, Catch, Char, Class, Const, Continue, default, do, double, else, enum, extends, final, finally, float, goto, if, implements, import, instanceof, int, interface, long, native, new, package, private, protected, public, return, short, static, strictfp, super, switch, synchronized, this, throw, throws, transient, try, void, volatile.
+2 – Declaração de classes – estrutura básica de uma classe é formada por um modificador de acesso pela palavra reservada ‘class’ e pelo um nome com uma palavra sempre começando com letra maiúscula representando um objeto do mundo real. Ex: public class Order { // atributos e metodos}
+Uma estrutura agora com as definições de atributos e métodos. 
+Ex: public class Order {
+//atributos
+Private final Strind code;
+Private final BigDecimal totalValue;
+//metodos
+Public BigDecimal calculateFee() {
+}
+} 
+Estrutura complete de uma classe:
+Ex: package com.dio.base
+Import java.math.BigDecimal;
+Public class Order {
+	Private final String code;
+	Private final BigDecimal totalValue;
+	Public Order(String code, BigDecimal totalValue){
+		This.code = code
+		This.totalValue = totalValue;
+}
+Public BigDecimal calculateFee() {
+		Return this.totalValue.multiply(new BigDecimal(“0.99”));
+}
+3 – Modificadores de acesso – Nós temos 3 tipos de modificadores
+•	Public – qualquer classe de qualquer pacote poderá acessar o atributo ou método.
+•	Protected – qualquer classe definida no mesmo pacote ou subclasse.
+•	Sem modificador – apenas classes definidas no mesmo pacote.
+•	Private – apenas a própria classe.
+4 – Métodos
+Métodos são funções que definem o comportamento de uma classe.
+Existem dois métodos no java
+•	Métodos construtores – definem como uma classe sera instanciada ‘construida’
+•	Métodos comum – definem comportamentos que podem não estar atribuídas as regras do negocio. Ex: calcular taxas de um pedido, etc.
+5 – Estrutura de condição – é responsável por fazer o desvio de fluxo de execução do código de acordo com uma dada condição.
+Tipos de estruturas de condição
+•	if – else
+ex: public double calculateFee() {
+if (totalValue > 100) {
+return totalValue * 0.99;
+} else {
+	Return totalValue;
+}
+ } 
+•	switch – case
+ex: public double calculateFee(){
+switch (totalValue) {
+	case 100:
+		return totalValue * 0.99;
+	case 200:
+		return totalValue * 1.99;
+	defaut: 
+return totalValue
+	}
+}
+}
+6 – Estrutura de repetição – é responsável por executar repetitivamente uma instrução ou um bloco de instruções ate uma condição estiver sendo satisfeita.
+•	while
+•	do-while
+•	for
+•	enhanced for
+Documentação em linha
+•	Comentarios em linha – comentários em linha são feitos com duas barras ‘//’
+•	Comentários em bloco – comentários em blocos são iniciadas por uma barra e dois asteriscos ‘/**’ e finalizados por um asterisco e uma barra ‘*/’
+•	Javadoc – é uma ferramenta para documentação no formato HTML que se baseia nos comentários do código fonte. Os comentários precisam conter tags para que a documentação fique legível.
+•	Tags Javadoc 
+@author – especifica o autor da classe ou do método
+@deprecated – identifica classes ou métodos obsoletos
+@link – possibilita a definição de um link para um outro documento local ou remoto através de um URL.
+@param – descreve um parâmetro que será passado a um método.
+@return – descreve qual tipo de retorno de um método.
+@see – associa a outras classes ou métodos
+@since – descreve desde quando uma classe ou métodos foi adicionado no código fonte.
+@ throws – descreve os tipos de exceções que podem ser lançadas por um método
+@version – descreve a versão da classe ou método.
+Requisitos de um profissional Java
+Ao evoluir na carreira de java e necessário desenvolver as soft skills quanto as hard skills
+Cada vez mais soft skills estão se tornando mais prioritárias que hard skills.
+Exemplos de soft skills
+•	Resolução de problemas complexos
+•	Pensamento Critico
+•	Criatividade
+•	Gestao de Pessoas
+•	Coordenação em equipe
+•	Liderança
+Hard Skills -  conhecer uma ferramenta exemplos:
+•	Spring Boot
+•	Spring Cloud
+•	Apache Kafka
+•	Rabbit MQ
+•	Arquitetura Cloud
+•	Banco de dados relacional e nao relacional

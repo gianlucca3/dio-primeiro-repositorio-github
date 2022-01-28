@@ -1,0 +1,155 @@
+Introdução ao ecossistema e documentação Java
+
+Java é uma linguagem de programação e uma plataforma lançada em 1985.
+É uma linguagem:
+•	Compilada
+•	Interpretada
+•	Fortemente tipada
+•	Linguagem de alto nível
+•	Executada em uma máquina virtual – JVM (java virtual machine)
+O código fonte é compilado para o bytecodes (.class) interpreta em JVM
+Entendendo JVM
+JVM é uma máquina virtual e responsável pela tradução dos bytecodes oriundos do compilador Javac (Java Compiler) em código de máquina de cada sistema operacional.
+
+Características da JVM:
+•	Execução de pilhas
+•	Gerenciamento de memoria
+•	Gerenciamento de threads
+•	Otimização de código (Compilação JIT – Just in Time)
+•	Garbage Collector (GC) – responsável por fazer toda limpeza da “memoria suja”
+Entendendo a JVM
+Diferença do java para outras linguagens compiladas é que nas outras linguagens você cria o código fonte para o Windows outro código para mac outro código para Linux, já o java um único código roda em todos os sistemas operacionais.
+Quais as diferenças entre JRE e JDK
+JRE (Java runtime Environment) – responsável por executar os programas em java.
+JDK (Java Denvelopment Kit) – utilitários que permite o desenvolvimento de programas em Java. Já possui a JVM para executar os programas.
+Quais tipos de plataformas Java?
+Java SE (Java Standard Edition) – contém todas as especificações do Java pode ser implementado por diversas empresas como Oracle OpenJDK, A
+zul zulu, etc.
+Java EE (Java enterprise edition) – contém todas as especificações do java se é um número de programas uteis para que executam em servidores. Em 2019 foi renomeado para Jakarta EE.
+Java ME (Micro Edition) – contem especificações para desenvolvimento de programas para dispositivos pequenos como celulares, PDAs, entre outros.
+
+Quais as implementações do Java SE
+•	OpenJDK
+•	Oracle JDK
+•	AdoptOpenJDK
+•	Amazon Corretto
+•	GraalVMSE
+•	Azul Zulu
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Variáveis, Tipo de dados e operadores aritméticos
+Conceituação e criação
+Variáveis
+“Um espaço na memoria do computador, onde se pode guardar valores”
+Existem 4 tipos:
+•	Instancia: objeto
+•	Classe: classe
+•	Local: dentro de métodos
+•	Parâmetro: na assinatura do método
+Criação
+Padrao de definição
+<?visibilidade?><?modificador?>tipo nome<?=valorInicial?>;
+O que esta em interrogação são opcionais
+V:”public”, “protected” e ”private”
+M: “static” e  ”final”
+T: Tipo de dado (OBRIGADORIO, SEMPRE TEM QUE SER DEFINICO)
+N: nome que é fornecido a variável
+VI: um valor inicial, caso se deseje
+Convenções e regras
+•	Não devem começar com números
+•	Embora permitido, “$” e ”_” devem ser evitados
+•	São case-sensitive
+•	Sem espaços
+•	Não pode usar as palavras reservadas do Java
+Conveções e regras:
+Exemplos:
+•	Int i;
+•	Int l;
+•	Int 1a; - vai gerar um erro de compilação
+•	Int_1a;
+•	Int $aq;
+•	Int l = 10;
+•	Int final j = 10;
+•	Int asrn24678md 
+•	Int asrn246 78md; - vai gerar um erro de compilação
+•	Int asrn2$4678_md = 10;
+•	Int asrn2$46%78_md = 10; - vai gerar um erro de compilação
+Boas práticas
+•	Sempre começar com letra minúscula
+•	Nomes expressivos
+•	Notação camelo
+•	Quando constate (final) maiúscula e separada por “_”
+Exercício 1 = Criar um simples projetos no IntelliJ e criar as variáveis do slide anterior.
+Tipos de dado em JAVA
+São os valores e consequentemente operações que as variáveis podem assumir e sofrer, respectivamente.
+Tipificação
+•	Estática (forte) vs Dinâmica (fraco) – 
+Estática = quando uma linguagem obriga você definir a variável no meio da criação. E vai ser sempre aquele tipo ate o final.
+Dinâmica = você não é obrigado a definir a variável no começo;
+•	Primitivo vs Composto
+Primitivo = são os dados mais básicos que a linguagem podem te oferecer, são numéricos, textuais.
+Composto = estão ligados a orientação a objeto, são heterogêneos são composto de vários dados primitivos.
+Quais são os tipos de dados
+•	Textual
+•	Numeral
+•	Logico
+•	Objeto
+Exemplos numeral:
+•	Byte: -128 ate 127 => byte b = 15
+•	Short: -32.768 ate 32.767 => short s = -15785;
+•	Int: - 2147.483.648 até 2.147.483.647 => int I = 8515785;
+•	Long: -9.223.372.036.854.775.808 até 9.223.372.036.854.775.807 => long l = 5938515785L;
+•	Float: +-3.40282327E+38F = float f = 3.14…(f);
+•	Double: +-1.79769313486231570E+308 => double d = 3.14…(d) ;
+Exemplos textual
+•	Char : caracteres de 16-bit unicode => char c = ‘\u0084’ ; ou char c = ’T’ ;
+•	String : um tipo “especial” => string s = “T”;
+Exemplos Logico
+•	Boolean: true e false => boolean s = false;
+Valor default
+•	Tipo de dado
+•	Byte = 0
+•	Short = 0
+•	Int = 0
+•	Long = 0L
+•	Float = 0.0f
+•	Double = 0.0d
+•	Char = ‘\u0000’
+•	String(e onbjetos) = null
+•	Boolean = false
+Boas praticas
+ Usar de forma adequada para cada tipo dedado para cada informação.
+Exercitando
+Criar uma simples projeto no IntelliJ e criar duas variáveis para cada tipo de dados apresentado.
+
+
+Operadores aritméticos 
+“São símbolos especiais quais são capazes de realizar ações especificas em um, dois ou mais operandos e, em seguida, retornar um resultado.”
+Tipos:
+•	Pós-fixado: exp++ ou exp—
+•	Prefixado: ++exp ou –exp
+•	Aritmético: +,-,*,/ e %
+•	Atribuição: =,=+,-=,*=,/= e %=
+Precedências:
+Operador - Precedencia
+•	Pos-fixado - exp++, exp--
+•	Prefixado - ++exp, --exp 
+•	Multiplicativo - *,/,%
+•	Aditivo - +,-
+•	Atribuição - =, +=,-=, *=, /=, %=
+Exercicio 1 – Criar um simples projeto no IntelliJ e as variáveis e operações apresentadas. Crie expressões em que as precedências influenciem nos resultados.
+
+Conversões (casting)
+“é a transformação de uma determinada  variável de tipo menos especifico para um tipo mais especifico ou vice-versa.”
+Tipos:
+•	Upcast (implícito) – promoção de um tipo de dado menor para uma maior capacidade de armazenamento.
+•	Downcast (explícito) – pega uma variável maior e rebaixar ela e transformar em uma variável menor de valor.
+Exercicio1 : Criar um simples projeto no IntelliJ e criar variáveis de vários tipos de diferentes para assim realizar casting (conversões)
+
+
+
+
+
+
